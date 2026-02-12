@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>MiezaLux | Premium Fashion & Luxury Store</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+<div class="logo">
+  <span class="brand-text">
+    Mieza<span class="lux">Lux</span>
+  </span>
+</div>
+
+
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#products">Shop</a>
+    <a href="#checkout">Checkout</a>
+  </nav>
+
+  <div class="cart" id="cartButton">
+    Cart (<span id="cartCount">0</span>)
+  </div>
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+  <section class="hero">
+
+    <div class="hero-logo">
+      <img src="images/miezalux 2.png" alt="MiezaLux Logo">
+    </div>
+
+    <p>Luxury Fashion • Premium Perfumes • Exclusive Accessories</p>
+
+    <button onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+      Explore Collection
+    </button>
+
+  </section>
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="about-us fade-in">
+  <div class="about-container fade-in">
+    <h2>About MiezaLux</h2>
+    <p>
+      MiezaLux is a premium lifestyle brand curated for individuals who appreciate elegance,
+      quality, and exclusivity. We offer luxury fashion, refined fragrances,
+      and carefully selected accessories crafted to elevate your presence.
+    </p>
+  </div>
+
+  <div class="why-choose-us">
+    <h3>Why Choose MiezaLux</h3>
+
+    <div class="features">
+
+  <div class="feature-card fade-in">
+    <div class="feature-image">
+      <img src="icons/premium.png" alt="Premium Quality">
+    </div>
+    <h4>Premium Quality</h4>
+    <p>Only high-end, carefully selected products for refined customers.</p>
+  </div>
+
+  <div class="feature-card fade-in">
+    <div class="feature-image">
+      <img src="icons/exclussive.jpg" alt="Exclusive Collection">
+    </div>
+    <h4>Exclusive Collection</h4>
+    <p>Limited pieces designed to make you stand out effortlessly.</p>
+  </div>
+
+  <div class="feature-card fade-in">
+    <div class="feature-image">
+      <img src="icons/delivery.png" alt="Trusted Delivery">
+    </div>
+    <h4>Trusted Delivery</h4>
+    <p>Secure and reliable delivery across Ghana.</p>
+  </div>
+
+</div>
+
+  </div>
+</section>
+
+
+<!-- ================= FILTERS ================= -->
+
+<div class="filters">
+  <input id="searchInput" type="text" placeholder="Search luxury items..." />
+  <select id="categorySelect">
+    <option value="all">All Categories</option>
+    <option value="Clothing">Clothing</option>
+    <option value="Perfume">Perfume</option>
+    <option value="Accessories">Accessories</option>
+    <option value="Sneakers">Sneakers</option>
+    <option value="Shoes">Shoes</option>
+  </select>
+</div>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section id="products" class="product-grid"></section>
+
+
+<!-- ================= CART PANEL ================= -->
+
+<section id="cartPanel" class="cart-panel" style="display:none;">
+  <h2>Your Cart</h2>
+  <div id="cartItems"></div>
+
+  <div class="cart-summary">
+    Total: GHS <strong id="cartTotal">0.00</strong>
+  </div>
+
+  <button id="checkoutBtn" type="button">
+    Proceed to Checkout
+  </button>
+</section>
+
+
+<!-- ================= CHECKOUT ================= -->
+
+<section id="checkout" class="checkout" style="display:none;">
+  <h2>Secure Checkout</h2>
+
+  <div id="checkoutCart"></div>
+
+  <form id="checkoutForm">
+    <input id="name" type="text" placeholder="Full Name" required autocomplete="name" />
+    <input id="phone" type="tel" placeholder="Phone Number" required autocomplete="tel" />
+    <input id="location" type="text" placeholder="Delivery Location" required autocomplete="street-address" />
+    <textarea id="note" placeholder="Additional note (optional)" autocomplete="off"></textarea>
+
+    <button type="submit" id="placeOrderBtn">
+      Place Order
+    </button>
+  </form>
+</section>
+
+
+<!-- ================= SUCCESS MODAL ================= -->
+
+<section id="orderSuccess" class="order-success">
+  <div class="success-card">
+    <h2>✓ Order Placed Successfully</h2>
+    <p>Thank you for choosing <strong>MiezaLux</strong></p>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Your luxury order has been received and will be processed shortly.</p>
+    <button type="button" onclick="location.reload()">
+      Continue Shopping
+    </button>
+  </div>
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+  <p>© 2026 MiezaLux. All Rights Reserved.</p>
+</footer>
+
+
+<!-- ================= FLOATING MOBILE CART ================= -->
+
+<div id="floatingCart" class="floating-cart">
+  🛒 <span id="floatingCartCount">0</span>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
